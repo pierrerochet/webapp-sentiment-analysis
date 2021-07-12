@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  align-items: center;
+}
+
+.network-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1.5em 0;
+}
+
+.network-button {
+  margin: 10px !important;
+  text-transform: none !important;
+}

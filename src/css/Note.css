@@ -1,0 +1,24 @@
+.emoji-enabled,
+.emoji-desabled,
+.star {
+  font-size: 2em !important;
+}
+
+.emoji-enabled {
+  opacity: 1;
+}
+
+.emoji-desabled {
+  opacity: 0.2;
+}
+
+.star {
+  color: #ffc200;
+}
+
+.note-items {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
