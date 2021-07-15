@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/webapp-sentiment-analysis/static/css/main.9b65eb10.chunk.css",
-    "main.js": "/webapp-sentiment-analysis/static/js/main.d4b34cd9.chunk.js",
-    "main.js.map": "/webapp-sentiment-analysis/static/js/main.d4b34cd9.chunk.js.map",
-    "runtime-main.js": "/webapp-sentiment-analysis/static/js/runtime-main.d228a81f.js",
-    "runtime-main.js.map": "/webapp-sentiment-analysis/static/js/runtime-main.d228a81f.js.map",
-    "static/js/2.99437228.chunk.js": "/webapp-sentiment-analysis/static/js/2.99437228.chunk.js",
-    "static/js/2.99437228.chunk.js.map": "/webapp-sentiment-analysis/static/js/2.99437228.chunk.js.map",
-    "static/js/3.d8e4fad7.chunk.js": "/webapp-sentiment-analysis/static/js/3.d8e4fad7.chunk.js",
-    "static/js/3.d8e4fad7.chunk.js.map": "/webapp-sentiment-analysis/static/js/3.d8e4fad7.chunk.js.map",
+    "main.js": "/webapp-sentiment-analysis/static/js/main.53cf03dc.chunk.js",
+    "main.js.map": "/webapp-sentiment-analysis/static/js/main.53cf03dc.chunk.js.map",
+    "runtime-main.js": "/webapp-sentiment-analysis/static/js/runtime-main.cd9034fd.js",
+    "runtime-main.js.map": "/webapp-sentiment-analysis/static/js/runtime-main.cd9034fd.js.map",
+    "static/js/2.6b687e46.chunk.js": "/webapp-sentiment-analysis/static/js/2.6b687e46.chunk.js",
+    "static/js/2.6b687e46.chunk.js.map": "/webapp-sentiment-analysis/static/js/2.6b687e46.chunk.js.map",
+    "static/js/3.8f2381e5.chunk.js": "/webapp-sentiment-analysis/static/js/3.8f2381e5.chunk.js",
+    "static/js/3.8f2381e5.chunk.js.map": "/webapp-sentiment-analysis/static/js/3.8f2381e5.chunk.js.map",
     "index.html": "/webapp-sentiment-analysis/index.html",
     "static/css/main.9b65eb10.chunk.css.map": "/webapp-sentiment-analysis/static/css/main.9b65eb10.chunk.css.map",
-    "static/js/2.99437228.chunk.js.LICENSE.txt": "/webapp-sentiment-analysis/static/js/2.99437228.chunk.js.LICENSE.txt"
+    "static/js/2.6b687e46.chunk.js.LICENSE.txt": "/webapp-sentiment-analysis/static/js/2.6b687e46.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d228a81f.js",
-    "static/js/2.99437228.chunk.js",
+    "static/js/runtime-main.cd9034fd.js",
+    "static/js/2.6b687e46.chunk.js",
     "static/css/main.9b65eb10.chunk.css",
-    "static/js/main.d4b34cd9.chunk.js"
+    "static/js/main.53cf03dc.chunk.js"
   ]
 }
