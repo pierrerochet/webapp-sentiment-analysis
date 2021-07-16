@@ -14,7 +14,7 @@ class MainRaw extends Component {
     super(props);
     this.state = {
       textAreaValue: "",
-      noteStyle: false,
+      noteStyle: true,
       sentiment: null,
     };
     this.handleAreaValueChange = this.handleAreaValueChange.bind(this);
@@ -27,16 +27,6 @@ class MainRaw extends Component {
     if (value === "") {
       this.setState({ sentiment: null });
     } else {
-      // To test without API available
-      if (process.env.NODE_ENV === "development") {
-        const possiblyValues = [1, 2, 3, 4, 5];
-        const random = Math.floor(Math.random() * possiblyValues.length);
-        const sent = possiblyValues[random];
-        this.setState({ sentiment: sent });
-
-        return;
-      }
-
       getSentiment(value).then((response) => {
         const sent = response.ml_tags.sentiment.label;
         this.setState({ sentiment: sent });
