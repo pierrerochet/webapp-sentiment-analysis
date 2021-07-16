@@ -7,7 +7,6 @@ import Switch from "@material-ui/core/Switch";
 import Typography from "@material-ui/core/Typography";
 import React, { Component } from "react";
 import { withTheme } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
 import "../css/Main.css";
 
 class MainRaw extends Component {
@@ -45,6 +44,10 @@ class MainRaw extends Component {
     const secondaryColor = this.props.theme.palette.secondary.main;
     const primaryColor = this.props.theme.palette.primary.main;
 
+    const gitHubName = process.env.REACT_APP_GITHUB_NAME;
+    const linkedInName = process.env.REACT_APP_LINKEDIN_NAME;
+    console.log(gitHubName);
+
     return (
       <div className="main" style={{ background: secondaryColor }}>
         <Typography variant="h3" align="center" className="title">
@@ -80,7 +83,7 @@ class MainRaw extends Component {
         </div>
 
         <Note sentiment={sentiment} style={noteStyle} />
-        <Footer gitHubName="pierrerochet" linkedInName="Pierre Rochet" />
+        <Footer gitHubName={gitHubName} linkedInName={linkedInName} />
       </div>
     );
   }

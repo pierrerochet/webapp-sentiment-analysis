@@ -58,7 +58,7 @@ function Note({ sentiment, style }) {
     <div>
       <Typography align="center">Score given by the algorithm :</Typography>
       <div className="note-items">
-        {style == "emojis"
+        {style === "emojis"
           ? displayEmojisNote(sentiment)
           : displayStarsNote(sentiment)}
       </div>

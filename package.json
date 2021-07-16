@@ -1,5 +1,5 @@
 {
-  "homepage": "https://pierrerochet.github.io/sentiment-analysis",
+  "homepage": "https://sentimentanalysis.pierrerochet.com",
   "name": "webapp-sentiment-analysis",
   "version": "0.1.0",
   "private": true,
@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "gh-pages": "^3.2.3",
     "node-fetch": "^2.6.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -16,7 +17,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "deploy": "react-scripts build && gh-pages -d build",
+    "deploy": "react-scripts build && echo sentimentanalysis.pierrerochet.com > ./build/CNAME && gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -1,6 +1,6 @@
 import { createTheme } from "@material-ui/core/styles";
 
-const primaryColor = "#C39BD3";
+const primaryColor = "#7CD06A";
 const theme = createTheme({
   typography: {
     allVariants: {
