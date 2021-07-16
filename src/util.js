@@ -2,7 +2,7 @@ import fetch from "node-fetch";
 
 export async function getSentiment(value) {
   const url = process.env.REACT_APP_API_ENDPOINT + "/api/v1/sentiment/predict";
-  console.log(url);
+  console.log(process.env.REACT_APP_API_ENDPOINT);
   const res = await fetch(url, {
     method: "POST",
     body: JSON.stringify({ text: value }),
