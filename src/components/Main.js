@@ -39,7 +39,6 @@ class MainRaw extends Component {
   }
 
   render() {
-    const sentiment = this.state.sentiment;
     const noteStyle = this.state.noteStyle ? "stars" : "emojis";
     const secondaryColor = this.props.theme.palette.secondary.main;
     const primaryColor = this.props.theme.palette.primary.main;
@@ -83,7 +82,7 @@ class MainRaw extends Component {
           <Typography display="inline">emojis</Typography>
         </div>
 
-        <Note sentiment={sentiment} style={noteStyle} />
+        <Note sentiment={this.state.sentiment} style={noteStyle} />
         <Footer
           gitHubName={gitHubName}
           gitHubUrl={gitHubUrl}
