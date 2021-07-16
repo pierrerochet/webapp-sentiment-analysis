@@ -14,7 +14,7 @@ class MainRaw extends Component {
     super(props);
     this.state = {
       textAreaValue: "",
-      noteStyle: true,
+      noteStyle: false,
       sentiment: null,
     };
     this.handleAreaValueChange = this.handleAreaValueChange.bind(this);
