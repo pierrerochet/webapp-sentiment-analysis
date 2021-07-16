@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React from "react";
 import { ThemeProvider } from "@material-ui/core/styles";
 import Main from "./components/Main";
 import theme from "./theme";
