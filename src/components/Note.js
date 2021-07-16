@@ -8,32 +8,41 @@ import StarBorderIcon from "@material-ui/icons/StarBorder";
 import Typography from "@material-ui/core/Typography";
 import "../css/Note.css";
 
+export const sentimentColors = {
+  null: "#344335",
+  1: "#E74C3C",
+  2: "#F0B27A",
+  3: "#FCF3CF",
+  4: "#7DCEA0",
+  5: "#28B463",
+};
+
 function displayEmojisNote(sentiment) {
   return (
     <div>
       <SentimentVeryDissatisfiedIcon
         className={sentiment === 1 ? "emoji-enabled" : "emoji-desabled"}
-        style={{ color: "red" }}
+        style={{ color: sentimentColors[1] }}
       />
 
       <SentimentDissatisfiedIcon
         className={sentiment === 2 ? "emoji-enabled" : "emoji-desabled"}
-        style={{ color: "orange" }}
+        style={{ color: sentimentColors[2] }}
       />
 
       <SentimentSatisfiedIcon
         className={sentiment === 3 ? "emoji-enabled" : "emoji-desabled"}
-        style={{ color: "lightBlue" }}
+        style={{ color: sentimentColors[3] }}
       />
 
       <SentimentSatisfiedAltIcon
         className={sentiment === 4 ? "emoji-enabled" : "emoji-desabled"}
-        style={{ color: "lightGreen" }}
+        style={{ color: sentimentColors[4] }}
       />
 
       <SentimentVerySatisfiedIcon
         className={sentiment === 5 ? "emoji-enabled" : "emoji-desabled"}
-        style={{ color: "green" }}
+        style={{ color: sentimentColors[5] }}
       />
     </div>
   );
@@ -53,7 +62,7 @@ function displayStarsNote(sentiment) {
   );
 }
 
-function Note({ sentiment, style }) {
+export function Note({ sentiment, style }) {
   return (
     <div>
       <Typography align="center">Score given by the algorithm :</Typography>

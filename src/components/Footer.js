@@ -4,7 +4,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import "../css/Footer.css";
 
 function Footer(props) {
-  const { gitHubName, linkedInName } = props;
+  const { gitHubName, gitHubUrl, linkedInName, linkedInUrl } = props;
   return (
     <div className="footer">
       <div className="network-list">
@@ -13,6 +13,8 @@ function Footer(props) {
           variant="contained"
           color="primary"
           size="small"
+          href={linkedInUrl}
+          target="_blank"
           endIcon={<LinkedInIcon />}
         >
           {linkedInName}
@@ -21,8 +23,10 @@ function Footer(props) {
         <Button
           className="network-button"
           variant="outlined"
-          color="primary"
+          // color="primary"
           size="small"
+          href={gitHubUrl}
+          target="_blank"
           endIcon={<GitHubIcon />}
         >
           {gitHubName}

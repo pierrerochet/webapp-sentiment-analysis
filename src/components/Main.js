@@ -1,4 +1,4 @@
-import Note from "./Note";
+import { Note } from "./Note";
 import { getSentiment } from "../util";
 import Intro from "./Intro";
 import Footer from "./Footer";
@@ -14,8 +14,8 @@ class MainRaw extends Component {
     super(props);
     this.state = {
       textAreaValue: "",
-      sentiment: null,
       noteStyle: true,
+      sentiment: null,
     };
     this.handleAreaValueChange = this.handleAreaValueChange.bind(this);
     this.handleNoteStyleChange = this.handleNoteStyleChange.bind(this);
@@ -27,6 +27,16 @@ class MainRaw extends Component {
     if (value === "") {
       this.setState({ sentiment: null });
     } else {
+      // To test without API available
+      if (process.env.NODE_ENV === "development") {
+        const possiblyValues = [1, 2, 3, 4, 5];
+        const random = Math.floor(Math.random() * possiblyValues.length);
+        const sent = possiblyValues[random];
+        this.setState({ sentiment: sent });
+
+        return;
+      }
+
       getSentiment(value).then((response) => {
         const sent = response.ml_tags.sentiment.label;
         this.setState({ sentiment: sent });
@@ -44,9 +54,10 @@ class MainRaw extends Component {
     const secondaryColor = this.props.theme.palette.secondary.main;
     const primaryColor = this.props.theme.palette.primary.main;
 
-    const gitHubName = process.env.REACT_APP_GITHUB_NAME;
-    const linkedInName = process.env.REACT_APP_LINKEDIN_NAME;
-    console.log(gitHubName);
+    const gitHubName = "pierrerochet";
+    const gitHubUrl = "https://github.com/pierrerochet";
+    const linkedInName = "Pierre Rochet";
+    const linkedInUrl = "https://www.linkedin.com/in/pierre-rochet";
 
     return (
       <div className="main" style={{ background: secondaryColor }}>
@@ -83,7 +94,12 @@ class MainRaw extends Component {
         </div>
 
         <Note sentiment={sentiment} style={noteStyle} />
-        <Footer gitHubName={gitHubName} linkedInName={linkedInName} />
+        <Footer
+          gitHubName={gitHubName}
+          gitHubUrl={gitHubUrl}
+          linkedInName={linkedInName}
+          linkedInUrl={linkedInUrl}
+        />
       </div>
     );
   }
