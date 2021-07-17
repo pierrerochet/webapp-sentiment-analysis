@@ -1,8 +1,9 @@
 # build environment
-FROM node:13.12.0-alpine as build
+FROM node:14.17.0-alpine as build
 WORKDIR /app
 COPY . /app
-RUN npm install
+RUN npm install --no-package-lock
+COPY ./.env.development .env.production
 RUN npm run build
 
 # production environment
